@@ -4,6 +4,14 @@ from insertion_sort import insertion_sort
 
 
 class InsertionSortTests(unittest.TestCase):
+
+    def test_single_elem_seq_sorting(self):
+        single_elem_seq = [1]
+        expected_sorted_seq = [1]
+
+        insertion_sort(single_elem_seq)
+        self.assertListEqual(single_elem_seq, expected_sorted_seq)
+
     def test_asc_seq_sorting(self):
         asc_seq = [1, 2, 3, 4, 5]
         expected_sorted_seq = [1, 2, 3, 4, 5]
